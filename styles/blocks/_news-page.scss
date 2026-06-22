@@ -1,0 +1,118 @@
+.news-page {
+  padding: max(112px, (100vw - 375px) / 10.43)
+  max(16px, (100vw - 375px) / 16.09)
+  max(32px, (100vw - 375px) / 22.14)
+  max(112px, (100vw - 1024px) / 3.73);
+
+  @include tablet {
+    padding-left: max(16px, (100vw - 375px) / 5.79);
+  }
+}
+
+.news-filters {
+  padding: 24px 0;
+  display: flex;
+  gap: 12px;
+
+  @include tablet {
+    padding: 12px 0;
+  }
+}
+
+.news-filter-btn {
+  border: 1px solid #05152a;
+  border-radius: 4px;
+  background: transparent;
+  line-height: 1;
+  padding: 12px 24px;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  @include desktop {
+    font-size: 20px;
+  }
+
+  @include tablet {
+    font-size: 18px;
+  }
+
+  @include mobile{
+    padding: 6px 12px;
+  }
+
+  &:hover {
+    color: #c49a6c;
+    border: 1px solid #c49a6c;
+    border-radius: 4px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    border: 1px solid #05152a;
+    box-shadow: none !important; /* На случай, если это тень */
+    outline: 1px solid #05152a;
+    outline-offset: 0;
+    border-radius: 2px;
+  }
+
+  &:active {
+    box-shadow: none !important; /* На случай, если это тень */
+    border: 1px solid #05152a;
+    outline: 1px solid #05152a;
+    outline-offset: 0;
+  }
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  gap: 24px;
+
+  @include mobile {
+    grid-template-columns: repeat(auto-fill, minmax(342px, 1fr));
+  }
+}
+
+.news-card-item {
+  width: 100%;
+  display: block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.news-card-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.swiper-slide:nth-child(1) .news-card-item.is-visible,
+.news-card-item:nth-child(1).is-visible {
+  transition-delay: 0.1s;
+}
+
+.swiper-slide:nth-child(2) .news-card-item.is-visible,
+.news-card-item:nth-child(2).is-visible {
+  transition-delay: 0.2s;
+}
+
+.swiper-slide:nth-child(3) .news-card-item.is-visible,
+.news-card-item:nth-child(3).is-visible {
+  transition-delay: 0.3s;
+}
+
+.swiper-slide:nth-child(4) .news-card-item.is-visible,
+.news-card-item:nth-child(4).is-visible {
+  transition-delay: 0.4s;
+}
+
+.news-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}

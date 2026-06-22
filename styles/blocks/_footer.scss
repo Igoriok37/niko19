@@ -1,0 +1,264 @@
+.footer {
+  background: #536e83;
+  padding: max(64px, (100vw - 375px) / 12.07) 
+  0 
+  max(64px, (100vw - 375px) / 12.07) 
+  max(112px, (100vw - 1024px) / 3.73);
+
+  @include tablet {
+    padding-left: max(16px, (100vw - 375px) / 5.79);
+  }
+
+  @include mobile {
+    padding-inline: 0;
+  }
+}
+
+.footer__body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: var(--color-gray-bg);
+  font-size: 22px;
+}
+
+@media (max-width: 1024px) {
+  .footer__body {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__body {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 48px;
+    font-size: 20px;
+  }
+}
+
+.footer__logo {
+  display: flex; /* Чтобы точно не было лишних отступов */
+  width: 96px;
+  height: 96px;
+  outline: none;
+}
+
+.footer__logo svg {
+  width: 100%;
+  height: 100%;
+  fill: #ffffff; /* Задаем начальный цвет здесь */
+  transition: fill 0.3s ease; /* Плавно меняем цвет ТЕКСТА (и логотипа) */
+  pointer-events: none;
+}
+
+.footer__logo:hover svg {
+  fill: #c49a6c;
+}
+
+.footer__appeal {
+  font-weight: 400;
+  font-size: clamp(16px, 3vw, 48px);
+  line-height: 1.3;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.footer__col--1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 700px;
+  margin-right: 30px;
+
+  @include desktop-xl {
+    min-width: 600px;
+  }
+
+  @include desktop-l {
+    min-width: 500px;
+  }
+
+  @include desktop {
+    min-width: 400px;
+  }
+
+  @include tablet {
+    min-width: 100px;
+    margin: 0;
+  }
+}
+
+.footer__col-title {
+  margin-bottom: 32px;
+  font-weight: 400;
+  font-size: clamp(40px, 3vw, 48px);
+  line-height: 1;
+  color: #fff;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.footer__menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+@media (max-width: 768px) {
+  .footer__menu-list {
+    align-items: center;
+  }
+}
+
+.footer__soc1als-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: -4px;
+  margin-bottom: 70px;
+}
+
+.footer__menu-link {
+  transition: all 0.3s ease-in-out;
+  font-size: 22px;
+  line-height: 1.3;
+
+  &:hover {
+    color: #c49a6c;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+
+  &:active {
+    color: #c49a6c;
+  }
+
+  &.active {
+    color: #c49a6c !important;
+  }
+}
+
+.footer__svg-wrapper {
+  transition: all 0.3s ease-in-out;
+}
+
+.footer__soc1als-link {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 22px;
+  font-size: 22px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: #c49a6c;
+    .footer__svg-wrapper {
+      background-color: #c49a6c;
+    }
+
+    svg path {
+      fill: #ffffff;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+
+  &:active {
+    color: #c49a6c;
+    .footer__svg-wrapper {
+      background-color: #c49a6c;
+    }
+
+    svg path {
+      fill: #ffffff;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+.footer__svg-wrapper {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.footer__soc1als-link svg {
+  path {
+    fill: #536e83;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.footer__menu-email {
+  transition: all 0.3s ease-in-out;
+
+  &:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+
+  &:hover {
+    color: #c49a6c;
+  }
+
+  &:active {
+    color: #c49a6c;
+  }
+}
+
+.footer__menu-out-link {
+  display: block;
+  width: fit-content;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 22px;
+
+  &:hover {
+    color: #c49a6c;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+
+  &:active {
+    color: #c49a6c;
+  }
+}

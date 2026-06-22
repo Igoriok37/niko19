@@ -1,0 +1,100 @@
+.meet {
+  padding: max(32px, (100vw - 375px) / 22.14)
+  max(16px, (100vw - 375px) / 16.09)
+  max(32px, (100vw - 375px) / 22.14)
+  max(112px, (100vw - 1024px) / 3.73);
+  background: rgba(156, 178, 192, 0.1);
+
+  @include tablet {
+    padding-left: max(16px, (100vw - 375px) / 5.79);
+  }
+}
+
+.meet__title {
+  margin-bottom: max(32px, (100vw - 375px) / 22.14);
+}
+
+.meet__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.meet__content-inner {
+  padding-block: 24px;
+  padding-right: max(24px, (100vw - 1024px) / 9.33);
+  width: 100%;
+  height: auto;
+}
+
+.meet__quote-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+
+  @include mobile {
+    align-items: center;
+    padding: 0;
+    gap: 8px;
+  }
+}
+
+.meet__quote-text p {
+  max-width: 650px;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(24px, 2vw, 32px);
+  line-height: 1.3;
+  color: #05152a;
+
+  @include tablet {
+    font-size: clamp(20px, 4vw, 32px);
+  }
+}
+
+
+
+.meet__quote-author {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.3;
+  color: #05152a;
+  
+  @include mobile {
+    font-size: 18px;
+    text-align: right;
+  }
+}
+
+
+.meet__quote-author cite {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.3;
+
+  @include mobile {
+    font-size: 16px;
+    text-align: right;
+  }
+}
+
+.meet__image {
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  align-self: center;
+
+  @include tablet {
+    order: -1;
+    width: 100%;
+    align-self: center;
+  }
+}

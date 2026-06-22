@@ -1,0 +1,26 @@
+.hero__image {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero__content {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  padding-inline: max(112px, (100vw - 1024px) / 3.73);
+  color: #ffffff;
+
+  @include tablet {
+    padding-inline: max(16px, (100vw - 375px) / 5.79);
+  }
+}
+
+.hero__title {
+  margin-bottom: clamp(0px, 4vw, 36px);
+  font-size: clamp(48px, 8vw, 96px);
+}
+
+

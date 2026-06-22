@@ -1,0 +1,145 @@
+.selected {
+  padding-block: max(32px, (100vw - 375px) / 22.14) 0;
+}
+
+.selected__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: max(64px, (100vw - 375px) / 12.07);
+}
+
+.selected__title {
+  margin-left: max(112px, (100vw - 1024px) / 3.73);
+  margin-bottom: max(32px, (100vw - 375px) / 22.14);
+
+  @include tablet {
+    margin-left: max(16px, (100vw - 375px) / 5.79);
+  }
+}
+
+.selected-card {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mobile {
+    height: 60vh;
+  }
+}
+
+.selected-card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.selected-card__link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 18px;
+  border-radius: 4px;
+  padding-block: 10px;
+  padding-inline: 12px;
+  font-size: 22px;
+  line-height: 1;
+  color: #fff;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+  pointer-events: all;
+
+  @include tablet {
+    font-size: 18px;
+  }
+
+  @include mobile-s {
+    font-size: 16px;
+  }
+
+  & svg {
+    width: 12px;
+    height: 24px;
+
+    @include tablet {
+      width: 10px;
+      height: 20px;
+    }
+
+    @include mobile-s {
+      width: 8px;
+      height: 16px;
+    }
+  }
+
+  &:hover {
+    color: #c49a6c;
+    border: 1px solid #c49a6c;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+
+  &:active {
+    color: #c49a6c;
+  }
+}
+
+.selected-card__title {
+  margin-bottom: 12px;
+  font-size: clamp(48px, 8vw, 96px);
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.selected-card__subtitle {
+  margin-bottom: 24px;
+  font-weight: 400;
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1;
+  color: #ffffff;
+
+  @include tablet {
+    margin-bottom: 16px;
+  }
+
+  @include tablet {
+    margin-bottom: 8px;
+  }
+}
+
+.selected__image {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 100%;
+  height: 140%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  will-change: transform;
+}
+
+.selected__card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

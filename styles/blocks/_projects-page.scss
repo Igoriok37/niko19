@@ -1,0 +1,306 @@
+.catalog {
+  padding: max(112px, (100vw - 375px) / 10.43) 
+  max(16px, (100vw - 375px) / 16.09) 
+  max(32px, (100vw - 375px) / 22.14)
+  max(112px, (100vw - 1024px) / 3.73);
+
+  @include tablet {
+    padding-left: max(16px, (100vw - 375px) / 5.79);
+  }
+}
+
+.inner-page-2 .projects-title {
+  margin-bottom: 0;
+}
+
+.inner-page-2 .complex-filters {
+  margin: 0;
+}
+
+.complex-filters {
+  display: inline-flex;
+  justify-content: start;
+  gap: 24px;
+  padding: 24px 24px 24px 0;
+  font-size: 22px;
+  font-weight: 400;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  @include desktop {
+    font-size: 20px;
+    gap: 12px;
+  }
+
+  @include tablet {
+    display: flex; /* Выстраиваем в ряд */
+    overflow-x: auto; /* Включаем горизонтальный скролл */
+    -webkit-overflow-scrolling: touch; /* Плавный скролл на iOS */
+    gap: 10px; /* Отступы между селектами */
+    padding: 12px 0; /* Чтобы селекты не прилипали к краям экрана */
+    scrollbar-width: none; /* Прячем полосу прокрутки в Firefox */
+
+    &::-webkit-scrollbar {
+      display: none; /* Прячем полосу прокрутки в Chrome/Safari */
+    }
+  }
+}
+
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 140px;
+  transition: width 0.3s ease; /* Плавность */
+
+  @include mobile {
+    flex-shrink: 0; /* Чтобы кнопки не сжимались, а сохраняли ширину */
+    min-width: 140px; /* Базовая ширина на мобилках чуть меньше */
+  }
+}
+
+.select-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(100% - 20px);
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid #05152a;
+  border-bottom: 2px solid #05152a;
+  transform: translateY(-70%) rotate(-45deg);
+  pointer-events: none;
+  /* Чтобы клик проходил сквозь стрелку в селект */
+  z-index: 5;
+  transition: all 0.3s ease-in-out;
+}
+
+.filter-select {
+  width: 100%;
+  appearance: none;
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 22px;
+  line-height: 1;
+  background: transparent;
+  box-sizing: border-box;
+  border: 1px solid #05152a;
+  border-radius: 4px;
+  padding: 12px 25px 12px 10px;
+  text-overflow: clip; /* Убираем многоточие */
+  white-space: nowrap; /* Запрещаем перенос строк */
+  overflow: visible; /* Позволяем тексту занимать всё место */
+  padding-right: 35px !important; /* Уменьшаем отступ под стрелку, если места мало */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  @include desktop {
+    padding: 12px 20px 12px 10px;
+    font-size: 20px;
+  }
+
+  @include tablet {
+    font-size: 18px;
+  }
+
+  @include mobile {
+    padding: 6px 20px 6px 10px;
+  }
+
+  &:hover {
+    color: #c49a6c;
+    border: 1px solid #c49a6c;
+    border-radius: 4px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    border: 1px solid #05152a;
+    box-shadow: none !important; /* На случай, если это тень */
+    outline: 1px solid #05152a;
+    outline-offset: 0;
+    border-radius: 2px;
+  }
+
+  &:active {
+    box-shadow: none !important; /* На случай, если это тень */
+    border: 1px solid #05152a;
+    outline: 1px solid #05152a;
+    outline-offset: 0;
+  }
+}
+
+.select-wrapper,
+.filter-select {
+  box-sizing: border-box !important;
+}
+
+.select-wrapper:hover::after {
+  border-left: 2px solid #c49a6c;
+  border-bottom: 2px solid #c49a6c;
+}
+
+.filter-select option {
+  color: #05152a;
+  border: none !important;
+  width: fit-content;
+}
+
+.filter-select option:hover {
+  border: none;
+}
+/* Фикс для Firefox */
+.filter-select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #ffffff;
+}
+
+/* Стили для самого выпадающего списка */
+.filter-select option {
+  background-color: #ffffff; /* Твой фирменный цвет */
+  color: #05152a; /* Белый текст */
+  padding: 10px; /* Внимание: padding в option часто игнорируется браузерами */
+}
+
+/* Стили для активного/выбранного элемента (работает не везде) */
+
+.filter-select option:hover {
+  background-color: #a37d52 !important;
+  color: #ffffff;
+}
+
+/* Скрытый элемент для замера */
+.select-resizer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: inherit;
+  padding: 0 15px; /* Те же боковые отступы */
+}
+
+.filter-reset-btn {
+  display: inline-block;
+  background: none;
+  border: 1px solid #05152a;
+  font-size: 22px;
+  line-height: 1;
+  border-radius: 4px;
+  padding: 12px 32px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  @include desktop {
+    font-size: 20px;
+  }
+
+  @include tablet {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  @include mobile {
+    padding: 6px 24px;
+  }
+
+  &:hover {
+    color: #c49a6c;
+    border: 1px solid #c49a6c;
+    border-radius: 4px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    border: 1px solid #05152a;
+    box-shadow: none !important; /* На случай, если это тень */
+    outline: 1px solid #05152a;
+    outline-offset: 0;
+    border-radius: 2px;
+  }
+
+  &:active {
+    box-shadow: none !important; /* На случай, если это тень */
+    border: 1px solid #05152a;
+    outline: 1px solid #05152a;
+    outline-offset: 0;
+  }
+}
+
+.no-results {
+  width: 100%;
+  padding: 60px 20px;
+  text-align: center;
+  font-size: 24px;
+  color: #888;
+  border: 1px dashed #ddd;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+.inline-reset-btn {
+  margin: 24px;
+  padding: 12px 32px;
+  border-radius: 4px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.projects-grid {
+  display: grid;
+  /* Автоматически создает колонки не меньше 300px */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 0;
+
+  @include desktop-l {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.projects-grid .project-item {
+  width: 100%;
+  display: block !important;
+  font-weight: 400;
+  line-height: 1.3;
+  text-transform: capitalize;
+  color: #05152a;
+}
+
+.projects-grid .project-info {
+  transition: all 0.3s ease-in-out;
+  padding-block: 16px;
+}
+
+.projects-grid .project-item img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+
+  @include mobile {
+    height: 70vh;
+  }
+}
+
+.projects-grid .project-item h3 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.projects-grid .project-item p {
+  font-size: 18px;
+}
