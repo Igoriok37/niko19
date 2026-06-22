@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "type": "event",
+    "date": "2026/10/01",
+    "isoDate": "2026-10-01", 
+    "title": "Global News:",
+    "desc": "Designing integrated environments, landscaping, and seamless connections...",
+    "image": "images/news4.webp",
+    "url": "news.html"
+  },
+  {
+    "id": 1,
+    "type": "event",
+    "date": "2026/10/01",
+    "isoDate": "2026-10-01", 
+    "title": "Global News:",
+    "desc": "Designing integrated environments, landscaping, and seamless connections...",
+    "image": "images/news1.webp",
+    "url": "news.html"
+  },
+  {
+    "id": 2,
+    "type": "news",
+    "date": "2026/09/15",
+    "isoDate": "2026-09-15", 
+    "title": "New Architecture Award:",
+    "desc": "Our team received the grand prize for the latest urban project...",
+    "image": "images/news2.webp",
+    "url": "news.html"
+  },
+  {
+    "id": 1,
+    "type": "event",
+    "date": "2026/10/01",
+    "isoDate": "2026-10-01", 
+    "title": "Global News:",
+    "desc": "Designing integrated environments, landscaping, and seamless connections...",
+    "image": "images/news3.webp",
+    "url": "news.html"
+  },
+  {
+    "id": 2,
+    "type": "news",
+    "date": "2026/09/15",
+    "isoDate": "2026-09-15", 
+    "title": "New Architecture Award:",
+    "desc": "Our team received the grand prize for the latest urban project...",
+    "image": "images/news4.webp",
+    "url": "news.html"
+  },
+  {
+    "id": 2,
+    "type": "news",
+    "date": "2026/09/15",
+    "isoDate": "2026-09-15", 
+    "title": "New Architecture Award:",
+    "desc": "Our team received the grand prize for the latest urban project...",
+    "image": "images/news3.webp",
+    "url": "news.html"
+  },
+  {
+    "id": 1,
+    "type": "event",
+    "date": "2026/10/01",
+    "isoDate": "2026-10-01", 
+    "title": "Global News:",
+    "desc": "Designing integrated environments, landscaping, and seamless connections...",
+    "image": "images/news2.webp",
+    "url": "news.html"
+  },
+  {
+    "id": 2,
+    "type": "news",
+    "date": "2026/09/15",
+    "isoDate": "2026-09-15", 
+    "title": "New Architecture Award:",
+    "desc": "Our team received the grand prize for the latest urban project...",
+    "image": "images/news1.webp",
+    "url": "news.html"
+  }
+]

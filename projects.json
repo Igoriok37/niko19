@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "title": "Business center",
+    "descr": "Serbiya",
+    "image": "images/projects/1.webp",
+    "url": "project.html",
+    "services": "Analysis & Strategy, 3D Visualization & Animation",
+    "sectors": "Residential, Hospitality",
+    "location": "Paris, France",
+    "status": "Completed"
+  },
+  {
+    "id": 2,
+    "title": "Modern Loft",
+    "descr": "Serbiya",
+    "image": "images/projects/2.webp",
+    "url": "project.html",
+    "services": "Analysis & Strategy, Concept, Masterplanning, Interior Design, Generative Design & AI, VR/AR & Interactive Tours, Immersive 3D Modeling, Architectural Engineering, Landscape Design, Project Supervision",
+    "sectors": "Residential",
+    "location": "Berlin, Germany",
+    "status": "Ongoing"
+  },
+  {
+    "id": 3,
+    "title": "Eco Villa 1",
+    "descr": "Serbiya",
+    "image": "images/projects/3.webp",
+    "url": "project.html",
+    "services": "Analysis & Strategy, 3D Visualization & Animation",
+    "sectors": "Residential, Hospitality",
+    "location": "Paris, France",
+    "status": "Completed"
+  },
+  {
+    "id": 4,
+    "title": "Modern Loft",
+    "descr": "Serbiya",
+    "image": "images/projects/4.webp",
+    "url": "project.html",
+    "services": "Concept, Interior Design",
+    "sectors": "Residential",
+    "location": "Berlin, Germany",
+    "status": "Ongoing"
+  },
+  {
+    "id": 5,
+    "title": "Eco Villa 1",
+    "descr": "Serbiya",
+    "image": "images/projects/5.webp",
+    "url": "project.html",
+    "services": "Analysis & Strategy, 3D Visualization & Animation",
+    "sectors": "Residential, Hospitality",
+    "location": "Paris, France",
+    "status": "Completed"
+  },
+  {
+    "id": 6,
+    "title": "Modern Loft",
+    "descr": "Serbiya",
+    "image": "images/projects/6.webp",
+    "url": "project.html",
+    "services": "Concept, Interior Design",
+    "sectors": "Residential",
+    "location": "Berlin, Germany",
+    "status": "Ongoing"
+  },
+  {
+    "id": 7,
+    "title": "Eco Villa 1",
+    "descr": "Serbiya",
+    "image": "images/projects/7.webp",
+    "url": "project.html",
+    "services": "Analysis & Strategy, 3D Visualization & Animation",
+    "sectors": "Residential, Hospitality",
+    "location": "Paris, France",
+    "status": "Completed"
+  },
+  {
+    "id": 8,
+    "title": "Modern Loft",
+    "descr": "Serbiya",
+    "image": "images/projects/8.webp",
+    "url": "project.html",
+    "services": "Concept, Interior Design",
+    "sectors": "Residential",
+    "location": "Berlin, Germany",
+    "status": "Ongoing"
+  },
+  {
+    "id": 8,
+    "title": "Modern Loft",
+    "descr": "Serbiya",
+    "image": "images/projects/9.webp",
+    "url": "project.html",
+    "services": "Concept, Interior Design",
+    "sectors": "Residential",
+    "location": "Berlin, Germany",
+    "status": "Ongoing"
+  }
+]
